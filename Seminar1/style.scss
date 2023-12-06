@@ -45,7 +45,10 @@
     transform: rotate(180deg);
 }
 
-.description_product {}
+.description_product {
+    margin-top: -60px;
+    position: relative;
+}
 
 .description {
     display: flex;
