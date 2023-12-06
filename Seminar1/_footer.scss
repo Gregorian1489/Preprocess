@@ -1,0 +1,152 @@
+.subscribe_box {
+    @include flex_between;
+    height: 448px;
+    background-image: url(/img/photo_subscribe.png);
+    background-size: cover;
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_box_text {
+            width: 360px;
+            height: 99px;
+            margin-top: 30px;
+        }
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 155px;
+        margin-right: 100px;
+
+        &_text1 {
+            @extend %font_3;
+            font-size: 24px;
+            color: #222224;
+        }
+
+        &_text2 {
+            @extend %font_1;
+            font-size: 18px;
+            color: #222224;
+        }
+    }
+}
+
+.subscribe_left_text {
+    @extend %font_1;
+    text-align: center;
+    color: #222224;
+    font-size: 20px;
+}
+
+.text_scb {
+    text-align: center;
+}
+
+.send_form {
+    display: flex;
+}
+
+.form11 {
+    position: relative;
+}
+
+.box {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: baseline;
+}
+
+.mail {
+    position: absolute;
+    border: none;
+    background-color: #E1E1E1;
+    margin-left: 25px;
+    margin-top: 7px;
+
+
+}
+
+.button_send_mail {
+    width: 100px;
+    height: 50px;
+    color: #fff;
+}
+
+.path {
+    position: relative;
+}
+
+.form_text {
+    display: flex;
+    position: absolute;
+    margin-top: 5px;
+}
+
+.placeholder-class::placeholder {
+    display: flex;
+    width: 170px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    @extend %font_1;
+    color: #222224;
+    font-size: 14px;
+
+}
+
+.form2 {
+    content: Subscribe;
+}
+
+.form_text2 {
+    display: flex;
+    position: absolute;
+    width: 85px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    @extend %font_1;
+    color: #FFF;
+    font-size: 14px;
+    line-height: normal;
+    margin-left: 260px;
+    margin-top: 6px;
+}
+
+.social {
+    @include flex_between;
+    height: 79px;
+    background-color: #222224;
+}
+
+.copyright {
+    color: #FBFBFB;
+    @extend %font_1;
+    font-size: 16px;
+
+}
+
+.social_network {
+    display: grid;
+    gap: 7px;
+    grid-template-columns: repeat(4, 32px);
+    justify-content: center;
+}
+
+.social_item {
+    @include flex_center(0px);
+    background-color: #FFF;
+    width: 32px;
+    height: 32px;
+
+}
+
+.social_item:hover {
+    background-color: #F16D7F;
+}
