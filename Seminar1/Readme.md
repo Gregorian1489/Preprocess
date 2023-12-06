@@ -10,4 +10,4 @@
 Скриншоты:
 
 ![Screen1](https://github.com/Gregorian1489/Preprocess/blob/main/Seminar1/img/Screen1.png)
-![Screen2](https://github.com/Gregorian1489/Preprocess/blob/main/Seminar1/img/Screen2.png)
+![Screen2](https://github.com/Gregorian1489/Preprocess/blob/main/Seminar1/img/Screen11.png)
