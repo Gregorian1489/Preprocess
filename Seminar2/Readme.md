@@ -1,4 +1,4 @@
-**Семинар 1:Урок 1. Препроцессы**
+**Семинар 1:Препроцессы**
 
 Вам необходимо создать страницу каталога
 Обязательно использовать препроцессоры
@@ -8,6 +8,5 @@
 
 Скриншоты:
 
-![]()
-![]()
-![]()
+![Screen1](https://github.com/Gregorian1489/Preprocess/blob/main/Seminar2/img/Screen1.png)
+![Screen2](https://github.com/Gregorian1489/Preprocess/blob/main/Seminar2/img/Screen2.png)
