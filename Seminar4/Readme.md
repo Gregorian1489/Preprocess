@@ -8,4 +8,4 @@
 
 Скриншоты:
 
-![]()
+![Screen](https://github.com/Gregorian1489/Preprocess/blob/main/Seminar4/img/Screen.png)
