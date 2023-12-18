@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:ital,wght@0,600;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:ital,wght@0,600;0,700;1,700&family=Roboto&display=swap');
+@import "vars";
+@import "header";
+@import "mixins";
+@import "footer";
+@import "bascet";
+@import "registration";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+.carousel {
+    height: 777px;
+    display: flex;
+    justify-content: center;
+    padding-top: 11px;
+    padding-bottom: 0;
+    background-color: $background_color_2;
+    position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 42px;
+    height: 42px;
+    background-color: #2A2A2A26;
+    opacity: 1;
+    margin-top: 373px;
+    right: -280px;
+}
+
+.carousel-control-prev {
+    left: -280px;
+}
+
+.icon_right {
+    transform: rotate(180deg);
+}
+
+.description_product {
+    margin-top: -60px;
+    position: relative;
+}
+
+.description {
+    display: flex;
+    width: 1140px;
+    height: 601px;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    padding-right: 294px;
+    padding-left: 294px;
+}
+
+.collection {
+    @extend %font_2;
+    font-size: 14px;
+    color: $color_pink;
+    margin-bottom: 12px;
+}
+
+.pink_line {
+    margin-bottom: 12px;
+}
+
+.name {
+    @extend %font_2;
+    font-size: 18px;
+    color: #4D4D4D;
+    margin-bottom: 48px;
+}
+
+.description_text {
+    @extend %font_2;
+    font-size: 14px;
+    color: $color_text_1;
+    margin-bottom: 48px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.price {
+    @extend %font_2;
+    font-size: 24px;
+    color: $color_pink;
+    margin-bottom: 65px;
+}
+
+.line {
+    margin-bottom: 65px;
+}
+
+.choice_menu {
+    margin-bottom: 48px;
+}
+
+.choice {
+    position: relative;
+}
+
+.choice_item {
+    list-style: none;
+    display: inline-block;
+}
+
+.choice_text {
+    @extend %font_1;
+    font-size: 14px;
+    color: #6F6E6E;
+    text-decoration: none;
+    margin-right: 9px;
+}
+
+.icon_drop {
+    margin-right: 23px;
+}
+
+.buy {
+    border: 1px solid $color_pink;
+    background-color: #fff;
+}
+
+.buy_box {
+    width: 212px;
+    height: 48px;
+    @include flex_center(18px);
+}
+
+.bottom_buy_text {
+    @extend %font_1;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: $color_pink;
+}
+
+.buy:hover {
+    background-color: $color_pink;
+
+    .bottom_buy_text {
+        color: #fff;
+    }
+
+    .icon_buy {
+        opacity: 0;
+    }
+}
+
+.other_products {
+    @include grid;
+    margin-bottom: 130px;
+    margin-top: 130px;
+    background-color: #fff;
+
+    .item {
+        background-color: #F8F8F8;
+    }
+}
+
+.op_text1 {
+    margin-top: 25px;
+    margin-left: 18px;
+    @extend %font_2;
+    color: #000;
+    font-size: 13px;
+}
+
+.op_text2 {
+    margin-top: 12px;
+    margin-left: 18px;
+    @extend %font_1;
+    color: #5D5D5D;
+    font-size: 14px;
+}
+
+.op_price {
+    margin-top: 18px;
+    margin-left: 18px;
+    @extend %font_2;
+    color: $color_pink;
+    font-size: 16px;
+}
+
+.catalog {
+    @include grid;
+    margin-bottom: 48px;
+
+    &_item {
+        display: flex;
+        flex-direction: column;
+        background-color: #F8F8F8;
+    }
+
+    &_img {
+        height: 420px;
+        margin-bottom: 25px;
+    }
+
+    &_img_2 {
+        height: 420px;
+        background-color: #F7E4E2;
+        margin-bottom: 25px;
+    }
+
+    &_title {
+        @include font_400(13px);
+        color: $color_black;
+        margin-bottom: 13px;
+        margin-left: 18px;
+    }
+
+    &_description {
+        @include font_300(14px);
+        color: $color_text_grey;
+        margin-left: 18px;
+        margin-bottom: 18px;
+        margin-right: 28px;
+    }
+
+    &_price {
+        @include font_400(16px);
+        color: $color_pink;
+        margin-left: 18px;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+.sort {
+    display: flex;
+    gap: 30px;
+
+    &_filter_details {
+        padding-top: 13px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        width: 360px;
+        position: relative;
+
+        &[open] {
+            background-color: #fff;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        }
+
+        &[open] .sort_summary_title {
+            color: $color_pink;
+        }
+
+        &[open] path {
+            fill: $color_pink;
+        }
+    }
+
+    &_filter {
+        position: relative;
+        height: 17px;
+        margin-bottom: 64px;
+    }
+
+    &_filter_summary {
+        list-style-type: none;
+    }
+
+    &_summary_title {
+        @include font_600(14px);
+        color: $color_black;
+        margin-right: 11px;
+    }
+
+    &_item {
+        margin-top: 16px;
+
+        &[open] .sort_item_title {
+            color: $color_pink;
+        }
+
+        &_box {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            padding: 24px 16px 0px 16px;
+        }
+
+        &_title {
+            list-style-type: none;
+            @include font_400(14px);
+            color: $color_text_grey;
+            padding: 8px 11px 11px 11px;
+            border-bottom: 1px solid #EBEBEB;
+            border-left: 5px solid $color_pink;
+        }
+
+        &_filter {
+            @include font_400(14px);
+            color: $color_text_grey;
+
+            &:hover {
+                color: $color_pink;
+            }
+        }
+    }
+
+    &_sort {
+        display: flex;
+        gap: 27px;
+        padding-top: 16px;
+
+        &_details {
+            position: relative;
+        }
+
+        &_summary {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style-type: none;
+        }
+
+        &_title {
+            @include font_400(14px);
+            color: $color_text_grey;
+        }
+
+        &_box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: absolute;
+            background: #FFF;
+            box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+            padding: 7px 30px 11px 9px;
+            left: -9px;
+            top: 20px;
+        }
+
+        &_check {
+            display: flex;
+            gap: 9px;
+            align-items: center;
+            color: #6F6E6E;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    height: 43px;
+    margin-bottom: 100px;
+
+    .page-link {
+
+        @include font_300(16px);
+        color: #C4C4C4;
+    }
+
+    .page-link:hover {
+        color: $color_pink;
+    }
+
+    .page-item:hover path {
+        fill: $color_pink;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .center {
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+    .carousel {
+        width: 100vw;
+        height: 624px;
+        top: -11px;
+
+
+        .d-block {
+            width: 466px;
+            height: 565px;
+        }
+
+        .carousel-control-next {
+            margin-top: 250px;
+            right: 0px;
+        }
+
+        .carousel-control-prev {
+            margin-top: 250px;
+            left: 0px;
+        }
+    }
+
+    .description_product {
+        margin-top: -11px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        .description {
+            border: 1px solid #EAEAEA;
+            width: 100vw;
+            height: 600px;
+            padding-left: 107px;
+            padding-right: 107px;
+        }
+    }
+
+    .other_products {
+        @include grid_768;
+
+        .display_none {
+            display: none;
+        }
+    }
+
+    .catalog {
+        @include grid_768;
+    }
+
+    .pagination {
+        margin-bottom: 62px;
+    }
+}

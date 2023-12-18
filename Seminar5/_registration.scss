@@ -1,0 +1,157 @@
+@import "vars";
+@import "mixins";
+@import "footer";
+
+.content {
+    display: flex;
+    padding-top: 64px;
+    padding-bottom: 96px;
+    gap: 129px;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 360px;
+
+        &__heading {
+            @include font_300(16px);
+            color: $color_black_back;
+            margin-bottom: 5px;
+        }
+
+        .input {
+            width: 360px;
+            height: 45px;
+            border: 1px solid #A4A4A4;
+            padding-left: 16px;
+
+            &::placeholder {
+                @include font_300(13px);
+                color: #B1B1B1;
+            }
+
+            &--margin {
+                margin-bottom: 5px;
+            }
+
+            &--margin_31 {
+                margin-bottom: 16px;
+            }
+        }
+
+        .radio_button {
+            display: flex;
+            gap: 10px;
+
+            label {
+                @include font_300(11px);
+                color: $color_black_back;
+                margin-right: 10px;
+            }
+
+            input[type='radio']:checked:after {
+                width: 7px;
+                height: 7px;
+                border-radius: 15px;
+                top: -1px;
+                left: 2px;
+                position: relative;
+                background-color: $color_pink;
+                content: '';
+                display: inline-block;
+                visibility: visible;
+                border: 1px solid $color_pink;
+            }
+        }
+
+        &__description {
+            @include font_300(13px);
+            color: #B1B1B1;
+            margin-bottom: 24px;
+        }
+
+        &__button {
+            width: 167px;
+            height: 50px;
+            background-color: $color_pink;
+            border: none;
+
+            &__text {
+                @include font_400(14px);
+                color: #FFF;
+                margin-right: 20px;
+            }
+
+            &:hover {
+                background-color: #FFF;
+                border: 1px solid $color_pink;
+            }
+
+            &:hover .left__button__text {
+                color: $color_pink;
+            }
+
+            &:hover path {
+                fill: $color_pink;
+            }
+
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &__heading {
+            @include font_300(24px);
+            color: $color_black_back;
+            margin-bottom: 8px;
+        }
+
+        &__text {
+            @include font_300(24px);
+            color: $color_black_back;
+            margin-bottom: 5px;
+        }
+
+        &__check_mark {
+            margin-right: 23px;
+        }
+
+        &__text_item {
+            @include font_300(24px);
+            color: $color_black_back;
+        }
+
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .content {
+        gap: 22px;
+
+        .right {
+
+            &__heading {
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+
+            &__text {
+                font-size: 16px;
+            }
+
+            &__check_mark {
+                font-size: 16px;
+            }
+
+            &__text_item {
+                font-size: 16px;
+            }
+
+        }
+    }
+}

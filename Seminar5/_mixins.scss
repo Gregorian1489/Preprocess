@@ -1,0 +1,80 @@
+@mixin flex_center($gap) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin flex_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 360px);
+    justify-content: center;
+}
+
+@mixin grid_768 {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 360px);
+    justify-content: center;
+}
+
+@mixin font_700($size) {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: $size;
+}
+
+@mixin font_600($size) {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: $size;
+}
+
+
+@mixin font_400($size) {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: $size;
+}
+
+@mixin font_300($size) {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: $size;
+}
+
+%font_1 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+%font_2 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+%font_3 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
