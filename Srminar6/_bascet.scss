@@ -1,0 +1,401 @@
+@import "vars";
+@import "mixins";
+
+
+
+.main {
+    display: flex;
+    padding-top: 96px;
+    gap: 129px;
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        &_item {
+            box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+            display: flex;
+            width: 652px;
+            height: 306px;
+        }
+    }
+
+    .bascet_img {
+        width: 262px;
+        height: 306px;
+        display: flex;
+    }
+
+    .bascet_img_2 {
+        width: 262px;
+        height: 306px;
+        display: flex;
+        background-image: url(/img/catalog_img22.svg);
+    }
+
+    .item_text {
+        position: relative;
+        padding-top: 22px;
+        padding-left: 31px;
+        display: flex;
+        flex-direction: column;
+
+        &_top {
+            @include font_400(24px);
+            color: $color_black_back;
+
+        }
+
+        &_heading {
+            margin-bottom: 6px;
+
+            .cross {
+                margin-left: 125px;
+            }
+
+            .cross:hover path {
+                fill: $color_pink;
+            }
+        }
+
+        &_1 {
+            margin-top: 36px;
+            margin-bottom: 6px;
+        }
+
+        &_all {
+            margin-bottom: 6px;
+        }
+
+        &_grey {
+            @include font_400(22px);
+            color: $color_text_grey_2;
+        }
+
+        &_pink {
+            @include font_400(22px);
+            color: $color_pink;
+        }
+
+        &_form {
+            display: flex;
+
+            &_input {
+                margin-left: 24px;
+                width: 44px;
+                height: 24px;
+                text-align: center;
+                @include font_400(18px);
+                color: $color_text_grey_2;
+                border: 1px solid #EAEAEA;
+            }
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    .button {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+        margin-bottom: 128px;
+
+        &_left {
+            width: 235px;
+            height: 50px;
+            background-color: transparent;
+            border: 1px solid #A4A4A4;
+            @include font_300(14px);
+            color: $color_black_back;
+        }
+
+        &_right {
+            width: 235px;
+            height: 50px;
+            background-color: transparent;
+            border: 1px solid #A4A4A4;
+            @include font_300(14px);
+            color: $color_black_back;
+        }
+
+        &_left:hover {
+            background-color: $color_pink;
+            border-color: $color_pink;
+            color: #FFF;
+        }
+
+        &_right:hover {
+            background-color: $color_pink;
+            border-color: $color_pink;
+            color: #FFF;
+        }
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: column;
+        padding-top: 17px;
+
+        &_adress {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 37px;
+        }
+
+        &_adress_heading {
+            @include font_300(16px);
+            color: $color_black_back;
+        }
+
+        &_input1 {
+            width: 360px;
+            height: 45px;
+            border: 1px solid #A4A4A4;
+            padding-left: 17px;
+            @include font_300(13px);
+            color: $color_black_back;
+
+            &::placeholder {
+                @include font_300(13px);
+                color: #B1B1B1;
+            }
+        }
+
+        &_input {
+            width: 360px;
+            height: 45px;
+            border: 1px solid #A4A4A4;
+            padding-left: 17px;
+            @include font_300(13px);
+            color: $color_black_back;
+
+            &::placeholder {
+                @include font_300(13px);
+                color: $color_black_back;
+            }
+        }
+
+        &_button_adress {
+            width: 101px;
+            height: 35px;
+            background-color: transparent;
+            border: 1px solid #A4A4A4;
+            @include font_300(11px);
+            color: $color_black_back;
+        }
+
+        &_button_adress:hover {
+            background-color: $color_pink;
+            border-color: $color_pink;
+            color: #FFF;
+        }
+
+        &_summ {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 360px;
+            height: 214px;
+            background-color: #F5F3F3;
+            padding-top: 39px;
+            padding-right: 34px;
+            padding-right: 51px;
+
+            &_sub {
+                @include font_400(11px);
+                color: #4A4A4A;
+                margin-bottom: 12px;
+            }
+
+            &_grand {
+                margin-bottom: 21px;
+            }
+
+            &_grand_1 {
+                @include font_300(16px);
+                color: $color_black_back;
+                margin-right: 20px;
+            }
+
+            &_grand_2 {
+                @include font_700(16px);
+                color: $color_pink;
+            }
+
+            &_line {
+                margin-bottom: 17px;
+            }
+
+            &_button {
+                width: 273px;
+                height: 50px;
+                background-color: $color_pink;
+                @include font_300(16px);
+                color: #FFF;
+                border: none;
+            }
+
+            &_button:hover {
+                background-color: #FFF;
+                color: $color_pink;
+                -webkit-box-shadow: 7px 9px 25px 0px rgba(255, 17, 102, 0.2);
+                -moz-box-shadow: 7px 9px 25px 0px rgba(255, 17, 102, 0.2);
+                box-shadow: 7px 9px 25px 0px rgba(255, 17, 102, 0.2);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .main {
+        flex-direction: column;
+        gap: 64px;
+        padding-top: 48px;
+
+        &_left {
+            align-items: center;
+
+            &_item {
+                width: 734px;
+                height: 306px;
+            }
+        }
+
+        .bascet_img {
+            width: 262px;
+            height: 306px;
+        }
+
+        .item_text {
+
+            &_heading {
+
+                .cross {
+                    margin-left: 210px;
+                }
+            }
+
+        }
+
+        .button {
+            margin-bottom: 0px;
+
+            &_left {
+                margin-right: 48px;
+            }
+        }
+
+        &_right {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            padding-bottom: 128px;
+
+            &_summ {
+                margin-top: 39px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+
+    .main {
+        flex-direction: column;
+        gap: 32px;
+        padding-top: 15px;
+
+        &_left {
+            align-items: center;
+            gap: 32px;
+
+            &_item {
+                width: 358px;
+                height: 188px;
+            }
+
+            .bascet_img {
+                object-fit: cover;
+                width: 144px;
+                height: 188px;
+            }
+
+            .bascet_img_2 {
+                width: 144px;
+                height: 188px;
+            }
+        }
+
+        .item_text {
+            padding-top: 13px;
+            padding-left: 17px;
+
+            &_top {
+                font-size: 16px;
+            }
+
+            &_heading {
+                font-size: 16px;
+                margin-bottom: 0px;
+
+                .cross {
+                    width: 10px;
+                    height: 10px;
+                    margin-left: 40px;
+                }
+            }
+
+            &_1 {
+                margin-top: 25px;
+                margin-bottom: 4px;
+            }
+
+            &_grey {
+                font-size: 14px;
+            }
+
+            &_pink {
+                font-size: 14px;
+            }
+
+            &_all {
+                margin-bottom: 4px;
+            }
+
+            &_form_input {
+                margin-left: 20px;
+                width: 24px;
+                height: 15px;
+            }
+        }
+
+        .button {
+            gap: 9px;
+            padding-top: 14px;
+            margin-bottom: 8px;
+
+            &_left {
+                width: 175px;
+                height: 33px;
+                font-size: 12px;
+            }
+
+            &_right {
+                width: 175px;
+                height: 33px;
+                font-size: 12px;
+            }
+        }
+
+        &_right {
+            padding-top: 0px;
+            margin-bottom: 96px;
+        }
+    }
+}
